@@ -1,0 +1,26 @@
+Feature: Medical Application view your health record
+
+Scenario: User Credentials for view your health record
+Given portal https://www.beauregardmedicalctr.com/
+Then verifies that there is a tab with narrow down "PATIENTS" button
+When clicks or place the cursor on "PATIENTS" verifies it brings out two options first "PATIENTS PORTAL"
+second "PATIENT FORMS"
+Then click on "PATIENTS PORTAL" to verify it redirects to new page
+Then verifies the option "View your health record" is clickable
+When click on "View your health record" verifies "User Name" and "Password" boxes are present
+Then verify "User Credentials" circle is highlighted
+Then Insert valid Username and Password
+Then click Login button
+
+Scenario: Using Mobile Phone for view your health record
+Given portal https://www.beauregardmedicalctr.com/
+Then verifies that there is a tab with narrow down "PATIENTS" button
+When clicks or place the cursor on "PATIENTS" verifies it brings out two options first "PATIENTS PORTAL"
+second "PATIENT FORMS"
+Then click on "PATIENTS PORTAL" to verify it redirects to new page
+Then verifies the option "View your health record" is clickable
+When click on "View your health record" verifies side box opens up
+Then verify "Using Mobile Phone" circle is highlighted or blackened
+Then verify "First Name", "Last Name", and "mm/dd/yyyy" boxes are present
+Then enter valid "First Name", "Last Name", and "mm/dd/yyyy"
+Then click "Submit" button
